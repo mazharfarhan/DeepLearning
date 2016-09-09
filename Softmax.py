@@ -6,7 +6,8 @@ import numpy as np
 
 def softmax(x):
     """Compute softmax values for each sets of scores in x."""
-
+    
+    # find the exponential of the sccore and divide it by the sum of the exponential of the score from other category.
     return np.exp(x) / np.sum(np.exp(x), axis = 0)
 
 print(softmax(scores))
